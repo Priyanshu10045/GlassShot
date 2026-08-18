@@ -1,28 +1,42 @@
-# GlassShot 📸
-
 <div align="center">
   <img src="Assets/icon_256.png" width="128" height="128" alt="GlassShot Logo" />
-  <h3>The High-Performance CleanShot X Alternative for Windows</h3>
-  <p>Pixel-perfect screenshots, real-time screen recordings, instant OCR, SkiaSharp annotations, and interactive floating thumbnail stacks.</p>
+  <h1>GlassShot</h1>
+  <p><strong>The High-Performance CleanShot X Alternative for Windows</strong></p>
+
+  [![Release](https://img.shields.io/badge/Release-v1.0.0-3A82F7?style=flat-square)](https://github.com/Priyanshu10045/GlassShot/releases)
+  [![Framework](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/download/dotnet/8.0)
+  [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows)](https://microsoft.com/windows)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+
+  <p>Zero-latency screenshots, real-time screen recordings, 2-pass GIF export, Windows Native OCR, SkiaSharp vector annotations, and interactive floating thumbnail stacks.</p>
 </div>
+
+---
+
+## 📥 Download & Quick Start
+
+### Direct Download (Latest Release)
+1. Download the latest binary from **[GitHub Releases (v1.0.0)](https://github.com/Priyanshu10045/GlassShot/releases/latest)**.
+2. Extract the archive and run `GlassShot.exe`.
+3. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> to take your first screenshot!
 
 ---
 
 ## ✨ Features
 
-- 🎯 **Pixel-Perfect Area & Fullscreen Capture**: Zero-latency virtual-screen multi-monitor capture with magnifier loupe precision.
-- 🎥 **Screen Recording & GIF Export**: Real-time high-framerate recording powered by FFmpeg with 2-pass Bayer dithering for crisp, lightweight GIFs.
-- 🔍 **Native Windows OCR Engine**: Extract text instantly from any screen selection straight to your clipboard with one shortcut.
-- 🗂️ **Interactive Quick Access Floating Stack**: Floating screenshot cards with macOS-inspired deck animations, drag-and-drop support, smooth wheel scrolling, and auto-dismiss timers.
-- 🎨 **SkiaSharp Annotation Studio**: Draw arrows, rectangles, blur sensitive information, and apply social gradient backgrounds with drop shadows.
-- 🧹 **Auto-Hide Desktop Icons**: Automatically hides cluttered desktop icons during capture for clean, distraction-free screenshots.
-- ⚙️ **Dark Glassmorphic Preferences**: Fully customizable keyboard shortcuts, video framerates, encoding presets, and capture directories.
+- 🎯 **Pixel-Perfect Screen Capture**: Zero-latency capture across mixed-DPI multi-monitor environments with a real-time pixel magnifier loupe.
+- 🎥 **Screen Recording & 2-Pass GIF Generation**: Record any screen region with configurable FPS and presets; export crisp, compact GIFs using custom 2-pass Bayer dithering.
+- 🔍 **Native Windows OCR**: Extract text instantly from screen crops straight to your clipboard with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>.
+- 🗂️ **Interactive Quick Access Floating Stack**: Floating screenshot cards with macOS-inspired deck animations, 120Hz smooth scrolling, auto-dismiss timers, and instant drag-and-drop into apps (Slack, Discord, browsers, Outlook).
+- 🎨 **SkiaSharp Annotation Studio**: Annotate with directional arrows, rectangles, blur/redact sensitive information, and apply stylish social gradient backgrounds with drop shadows.
+- 🧹 **Auto-Hide Desktop Icons**: Automatically hides cluttered desktop icons during capture for clean, distraction-free screenshots (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>).
+- ⚙️ **Modern Dark-Mode Preferences**: Full control over keyboard shortcuts, video framerates, encoding speed, and thumbnail sizes.
 
 ---
 
 ## ⌨️ Default Keyboard Shortcuts
 
-| Action | Shortcut | Description |
+| Action | Default Shortcut | Description |
 | :--- | :--- | :--- |
 | **Capture Area** | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Interactive screen crop with real-time loupe |
 | **Capture Fullscreen** | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Instantly captures entire virtual desktop |
@@ -34,39 +48,39 @@
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Building from Source
 
 ### Prerequisites
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or higher
 - Windows 10 (Build 19041+) / Windows 11
 
-### Build & Run from Source
+### Clone and Run
 ```powershell
 # Clone the repository
 git clone https://github.com/Priyanshu10045/GlassShot.git
 cd GlassShot
 
-# Run in development mode
+# Run development instance
 dotnet run
 ```
 
-### Produce a Release Build
+### Publish Release Build
 ```powershell
 dotnet publish -c Release -r win-x64 --self-contained false -o ./dist
 ```
 
 ---
 
-## 🛠️ Technology Stack
+## 🏗️ Architecture & Technology Stack
 
-- **Framework**: C# 12 / WPF (.NET 8)
-- **Graphics & Rendering**: SkiaSharp (Hardware accelerated 2D vector graphics)
-- **Video & GIF Processing**: FFmpeg CLI Automation
-- **System Integration**: Win32 API Interop (GDI+, PerMonitorV2 High-DPI Context, Global Hotkeys via NHotkey)
-- **Text Recognition**: Windows.Media.Ocr native runtime
+- **UI & Controls**: C# 12 / WPF (.NET 8) with PerMonitorV2 High-DPI context
+- **Graphics Engine**: SkiaSharp (Hardware accelerated 2D vector graphics)
+- **Video & GIF Processing**: FFmpeg automation
+- **System Level Hooks**: Win32 API Interop (GDI+, NHotkey global shortcut routing)
+- **Text Recognition**: `Windows.Media.Ocr` runtime
 
 ---
 
 ## 📄 License
 
-Distributed under the MIT License. See [LICENSE](LICENSE) for details.
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
