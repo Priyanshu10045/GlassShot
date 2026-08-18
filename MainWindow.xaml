@@ -1,0 +1,27 @@
+<Window x:Class="GlassShot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GlassShot"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        MouseRightButtonDown="Window_MouseRightButtonDown">
+    <Grid>
+        <!-- Background capture of the screen -->
+        <Image x:Name="ScreenBackground" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <!-- Dimmed overlay that cuts out the selection -->
+        <Path x:Name="OverlayPath" Fill="#80000000" />
+        
+        <!-- Selection border -->
+        <Rectangle x:Name="SelectionBorder" Stroke="White" StrokeThickness="1" StrokeDashArray="2,2" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        
+        <!-- Magnifier Loupe -->
+        <Ellipse x:Name="Magnifier" Width="120" Height="120" Stroke="#444" StrokeThickness="4" Visibility="Hidden" IsHitTestVisible="False" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <ImageBrush x:Name="MagnifierBrush" Stretch="Fill" ViewboxUnits="Absolute" />
+            </Ellipse.Fill>
+        </Ellipse>
+    </Grid>
+</Window>

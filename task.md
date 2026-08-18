@@ -1,0 +1,46 @@
+# GlassShot Task Tracker
+
+- `[x]` **Phase 1: Project Setup & Module A (The Capture & Overlay Engine)**
+  - `[x]` Setup .NET 8 WPF project structure (`GlassShot.sln`).
+  - `[x]` Implement low-level keyboard hooks (e.g. PrintScreen) using `NHotkey` or custom Win32 PInvoke.
+  - `[x]` Create multi-monitor transparent dimmed overlay window.
+  - `[x]` Implement cursor-tracking magnifier loupe.
+  - `[x]` Implement native screen region capture (GDI+/DirectX).
+- `[x]` **Phase 2: Module B & C (Quick Access Overlay & Always-On-Top Widgets)**
+  - `[x]` Create borderless Quick Access thumbnail window.
+  - `[x]` Implement Win32 `DoDragDrop` for dragging out of the thumbnail.
+  - `[x]` Implement Pinned Widget window logic (always-on-top, opacity adjustments).
+  - `[x]` Implement Click-Through mode using `WS_EX_TRANSPARENT`.
+- `[x]` **Phase 3: Module D (Vector Annotation Canvas)**
+  - `[x]` Integrate `SkiaSharp`.
+  - `[x]` Implement robust Undo/Redo stack.
+  - `[x]` Add drawing tools (arrows, rects, text, freehand, badges).
+  - `[x]` Implement processing filters (Pixelate, Blur) and Spotlight masking.
+  - `[x]` Add Social Background Canvas styling.
+- `[x]` **Phase 4: Module E (On-Device System Tools)**
+  - `[x]` Integrate `Windows.Media.Ocr` for OCR text extraction.
+  - `[x]` Implement `SysListView32` desktop icon visibility toggle.
+- `[x]` **Phase 5: Module F (Screen Recorder & Video Workspace)**
+  - `[x]` Implement `FFmpegDownloader` utility to fetch and extract `ffmpeg.exe`.
+  - `[x]` Implement `VideoRecordingMode` in `MainWindow` (selection UI + Record/GIF options).
+  - `[x]` Implement `FFmpegWrapper` process controller for `gdigrab` capture.
+  - `[x]` Implement floating Stop Recording toolbar.
+  - `[x]` Implement GIF Quantization post-processing pass.
+- `[x]` **Phase 6: CleanShot X UI/UX Parity (Video Overlay & Shortcuts)**
+  - `[x]` Remap global hotkeys to `Alt+Shift+X` schema.
+  - `[x]` Add video thumbnail extraction logic to `FFmpegManager`.
+  - `[x]` Refactor `QuickAccessWindow` to handle video files and drag-and-drop.
+  - `[x]` Integrate GIF conversion button into the Quick Access overlay.
+- `[x]` **Phase 7: Dynamic Layered Screenshot Stack**
+  - `[x]` Convert `QuickAccessWindow` to `ThumbnailLayer` UserControl.
+  - `[x]` Create `QuickAccessManagerWindow` as a singleton Canvas host.
+  - `[x]` Implement stacked Z-Index, scale, and offset logic on capture addition.
+  - `[x]` Implement vertical fanning hover animations.
+  - `[x]` Implement click-to-front layer promotion.
+- `[x]` **Phase 8: CleanShot X Preferences UI & System Tray Integration**
+  - `[x]` Enable `<UseWindowsForms>true</UseWindowsForms>` in `GlassShot.csproj`.
+  - `[x]` Create `SettingsManager.cs` for JSON configuration persistence.
+  - `[x]` Implement System Tray `NotifyIcon` and context menu in `MainWindow.xaml.cs`.
+  - `[x]` Create `SettingsWindow.xaml` and `SettingsWindow.xaml.cs` with tabbed navigation (General, Shortcuts, Quick Access, Recording, About).
+  - `[x]` Wire up live settings (Thumbnail Scale, Auto-Close timer, Shortcuts) to `QuickAccessManagerWindow` and `MainWindow`.
+  - `[x]` Add ⚙️ Settings button to `ThumbnailLayer.xaml` hover panel.
